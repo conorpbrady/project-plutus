@@ -1,0 +1,15 @@
+<section id="sidebar">
+<div id="account-container">
+<%= render @accounts %>
+
+
+<div class="account-name">Total:</div>
+<div class="account-total">
+  <%= @budget.total %>
+  </div>
+<div class="clear"></div>
+<div id="new-account">
+<%= link_to "New Account", "#" %>
+</div>
+</div>
+</section>

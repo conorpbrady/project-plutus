@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'devise/sessions#new'
+  root 'accounts#show'
 
-  resource :budgets,        only: [:show, :index]
-  resource :accounts,       only: [:index]
+  resources :budgets,        only: [:show, :index] do
+    resources :accounts,       only: [:show]
+  end
 end

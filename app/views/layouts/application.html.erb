@@ -10,8 +10,15 @@
   </head>
 
   <body>
+    <div id="grid-container">
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/sidebar' %>
+      <section id="content">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    </section>
+    <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
