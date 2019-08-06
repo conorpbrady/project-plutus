@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   root 'devise/sessions#new'
 
-  resource :budgets,   only: [:show, :index]
+  resource :budgets,        only: [:show, :index]
+  resource :accounts,       only: [:index]
 end
