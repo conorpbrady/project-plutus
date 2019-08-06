@@ -23,4 +23,6 @@ class AccountTest < ActiveSupport::TestCase
     @account.name = "a" * 33;
     assert_not @account.valid?
   end
+
+  
 end

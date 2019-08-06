@@ -23,4 +23,6 @@ class BudgetTest < ActiveSupport::TestCase
     assert_not @budget.valid?
   end
 
+
+
 end
