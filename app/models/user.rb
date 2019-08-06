@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
 
   has_many :budgets
+  has_many :payees
+  has_many :categories
 
-  
+
 end
