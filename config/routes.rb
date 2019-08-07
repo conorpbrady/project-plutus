@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   root 'accounts#show'
 
-  resources :budgets,        only: [:show, :index] do
-    resources :accounts,       only: [:show]
+  resources :budgets,          only: [:show, :index] do
+    resources :accounts,       only: [:show, :create, :update] do
+      resources :transactions, only: [:create, :update]
+    end
   end
 end

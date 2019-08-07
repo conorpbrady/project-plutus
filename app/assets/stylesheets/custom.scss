@@ -5,6 +5,7 @@ $med-green: #88D498;
 $light-green: #C6DABF;
 $light: #F3E9D2;
 
+
 #grid-container {
   display: grid;
   grid-template: 75px 1fr 75px / 200px 1fr;
@@ -38,9 +39,13 @@ footer {
 .clear {
   clear: both;
 }
-#account-container {
+
+.sidebar-content {
   border: 1px solid black;
   background-color: $light-green;
+  margin-bottom: 2rem;
+}
+#account-container {
 
   #new-account {
     background-color: $dark-green;
@@ -53,8 +58,4 @@ footer {
     float: right;
     margin-right: .25rem;
   }
-}
-#transaction-container {
-  display: grid;
-  grid-template: repeat(10, 1fr) / repeat(5, 1fr)
 }
