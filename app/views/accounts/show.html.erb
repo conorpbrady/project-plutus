@@ -1,36 +1,3 @@
-<table id="transaction-container">
-  <tr>
-  <th>Date</th>
-  <th>Payee</th>
-  <th>Category</th>
-  <th>Amount In</th>
-  <th>Amount Out</th>
-  </tr>
-  <%= render @transactions %>
-<tr>
-<%= form_with model: Transaction.new, url: budget_account_transaction_path(budget_id: @account.budget.id, account_id: @account.id), remote: true, html: { class: "transaction" } do |f| %>
-</td>
-<td>
-<%= f.date_field :transaction_date, placeholder: "#{Date.today()}" %>
-</td>
-<td>
-<%= f.text_field :payee, placeholder: "Payee" %>
-</td>
-<td>
-<%= f.select :category, options_for_select(current_user.categories.map { |c| c.name }) %>
-</td>
-<td>
-<%= f .number_field :amount_in %>
-</td>
-<td>
-<%= f.number_field :amount_out %>
-</td>
-<td>
-<%= f.button "√", type: :submit %>
-</td>
-<td>
-<%= f.button "X", type: :reset %>
-</td>
-</tr>
-</table>
-<% end %>
+<div id="transaction-table-container">
+<%= render 'transaction_table' %>
+</div>

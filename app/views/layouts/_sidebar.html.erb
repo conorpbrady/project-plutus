@@ -13,7 +13,10 @@
       </li>
     </ul>
   </div>
+
+    <% unless @accounts.nil? %>
 <div id="account-container" class="sidebar-content">
+
 <%= render @accounts %>
 
 
@@ -26,4 +29,5 @@
 <%= link_to "New Account", "#" %>
 </div>
 </div>
+<% end %>
 </section>

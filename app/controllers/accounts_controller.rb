@@ -1,9 +1,10 @@
 class AccountsController < ApplicationController
+  before_action :authenticate_user!
 
   def show
-    @budget = current_user.budgets.find(params[:budget_id])
+    @budget = current_budget
     @accounts = @budget.accounts
-    @account = @accounts.find(params[:id])
+    @account = current_account
     @transactions = @account.transactions
   end
 end

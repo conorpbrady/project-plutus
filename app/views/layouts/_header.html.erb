@@ -1,5 +1,11 @@
 <header>
-<%= current_user.email %>
+
+  <% unless current_user.nil? %>
+    <%= current_user.email %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path %>
+    <% end %>
+    
 
 <%= link_to "Logout", "#" %>
 
